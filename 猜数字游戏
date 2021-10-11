@@ -1,0 +1,23 @@
+x,y=0,0
+import random                                      #导入模块import random
+T=random.randint(0,9)                              #使用这个模块中的功能random.randint()
+print('游戏名称：猜数字')
+a=int(input('请输入一个0-9之间的数(包括0和9)：'))       #使用int()函数将input()函数输入的数据由字符串(str)类型转换为整形
+while (a!=T):                                      #实现循环输入
+    if a>T:
+        print('你输入的是',a,end='')                 #用end=''实现取消换行
+        a=int(input('遗憾，太大了。请重新输入：'))
+        x=x+1
+    if a<T:
+        print('你输入的是',a,end='');
+        a=int(input('遗憾，太小了。请重新输入：'))
+        y=y+1
+    N=x+y+1                                        #设置一个记数变量存放用户输入次数
+else:
+    print(f'预测{N}次，你猜中了')                    #输出用户输入次数
+
+'''要想使用随机数，需先导入随机数模块：import random
+也就是在开头写上import random
+random.random() ，用于生成一个0到1的随机符点数: 0 <= n < 1.0，即它在[0,1)范围内。
+random.uniform(a, b)，用于生成一个指定范围内的随机符点数，两个参数其中一个是上限，一个是下限。
+random.randint(a, b)，用于生成一个指定范围内的整数。其中参数a是下限，参数b是上限，生成的随机数n: a <= n <= b'''
