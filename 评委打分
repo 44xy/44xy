@@ -1,0 +1,19 @@
+list = []                       # 存放成绩的列表
+i = 1
+while i <= 6:                   # while循环输入成绩
+    score = input("请输入成绩:")
+    list.append(score)
+    i += 1
+print(list)
+list.sort(reverse=True)     # sort() 函数用于对原列表进行排序，如果指定参数，则使用比较函数指定的比较函数。
+print("按成绩由高到低排序：",list)
+list.remove(max(list))      # remove()方法通过指定元素的值来移除列表中某个元素的第一个匹配项，如果这个元素不在列表中会报一个异常。
+print("去掉最高分：",list)
+list.remove(min(list))
+print("去掉最低分：",list)
+sum=0
+for n in list:
+    sum += int(n)           # 转换n的数据类型
+average=sum/len(list)
+print("剩余的平均分：",average)
+#心得：len() 方法返回列表元素个数。
