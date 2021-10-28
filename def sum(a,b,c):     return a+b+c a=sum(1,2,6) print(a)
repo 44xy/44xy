@@ -1,0 +1,8 @@
+def sum(a,b,c):
+    return a+b+c
+a=sum(1,2,6)
+print(a)
+
+def s(a,b,c):
+    print(a+b+c)
+s(1,2,6)
